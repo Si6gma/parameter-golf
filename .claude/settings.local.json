@@ -10,7 +10,8 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:arxiv.org)",
       "Bash(echo \"EXIT:$?\")",
-      "WebFetch(domain:openreview.net)"
+      "WebFetch(domain:openreview.net)",
+      "WebFetch(domain:marktechpost.com)"
     ]
   }
 }
