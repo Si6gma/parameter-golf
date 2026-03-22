@@ -203,8 +203,11 @@ Non-record submissions should be made in the same fashion as SOTA records, as de
 
 The `train_gpt.py` and `train_gpt_mlx.py` scripts are intended as good launching-off points for new participants, not SOTA configs. We'll accept PRs that tune, improve, or simplify these scripts without significantly increasing complexity, but the best models should stay in the `/records` folder.
 
-## Support
+## Dev Tools
 
+The `dev_tools/` folder contains helper scripts for cloud training (setup, multi-seed training, verification). See `dev_tools/README.md` for details. These are not part of the official submission.
+
+## Support
 
 Join the [OpenAI Discord server](https://discord.com/invite/openai) and visit the Parameter Golf channels (#parameter-golf-discussions, #parameter-golf-announcements) and ask questions.
 
