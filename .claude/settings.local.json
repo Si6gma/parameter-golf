@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr:*)",
+      "WebSearch",
+      "Bash(gh api:*)",
+      "Bash(mkdir -p \"/Users/neivmalaviya/Code/parameter-golf/records/track_10min_16mb/2026-03-22_LateQAT_Int4_MLP3x_Bigram_SmearGate_SWA\")",
+      "Bash(cp \"/Users/neivmalaviya/Code/parameter-golf/records/track_10min_16mb/2026-03-22_Int4_MLP3x_Bigram_SmearGate_SWA/train_gpt.py\" \"/Users/neivmalaviya/Code/parameter-golf/records/track_10min_16mb/2026-03-22_LateQAT_Int4_MLP3x_Bigram_SmearGate_SWA/train_gpt.py\")",
+      "Bash(wait)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(echo \"EXIT:$?\")",
+      "WebFetch(domain:openreview.net)"
+    ]
+  }
+}

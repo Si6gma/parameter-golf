@@ -29,6 +29,9 @@ cd parameter-golf
 # Install dependencies
 echo ""
 echo "📦 Installing dependencies..."
+cd parameter-golf
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -q torch numpy sentencepiece zstandard tqdm
 
 # Download dataset
@@ -52,7 +55,7 @@ export TRAIN_BATCH_TOKENS=8192
 export ITERATIONS=5
 export MAX_WALLCLOCK_SECONDS=60
 
-timeout 90 torchrun --standalone --nproc_per_node=8 train_gpt.py 2>&1 | tail -20
+timeout 90 .venv/bin/torchrun --standalone --nproc_per_node=8 train_gpt.py 2>&1 | tail -20
 
 echo ""
 echo "=========================================="
@@ -61,5 +64,6 @@ echo "=========================================="
 echo ""
 echo "To start full training:"
 echo "  cd parameter-golf"
+echo "  source .venv/bin/activate"
 echo "  bash dev_tools/scripts/train_all_seeds.sh"
 echo ""
