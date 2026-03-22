@@ -26,12 +26,14 @@ fi
 
 cd parameter-golf
 
-# Install dependencies
+# Create virtual environment
 echo ""
-echo "📦 Installing dependencies..."
-cd parameter-golf
+echo "📦 Creating virtual environment..."
 python3 -m venv .venv
 source .venv/bin/activate
+
+# Install dependencies
+echo "📦 Installing dependencies..."
 pip install -q torch numpy sentencepiece zstandard tqdm
 
 # Download dataset
@@ -55,7 +57,7 @@ export TRAIN_BATCH_TOKENS=8192
 export ITERATIONS=5
 export MAX_WALLCLOCK_SECONDS=60
 
-timeout 90 .venv/bin/torchrun --standalone --nproc_per_node=8 train_gpt.py 2>&1 | tail -20
+timeout 90 torchrun --standalone --nproc_per_node=8 train_gpt.py 2>&1 | tail -20
 
 echo ""
 echo "=========================================="
