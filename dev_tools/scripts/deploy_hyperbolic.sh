@@ -21,7 +21,7 @@ echo ""
 # Clone repo (if not already done)
 if [ ! -d "parameter-golf" ]; then
     echo "📦 Cloning repository..."
-    git clone https://github.com/yourusername/parameter-golf.git
+    git clone https://github.com/Si6gma/parameter-golf.git
 fi
 
 cd parameter-golf

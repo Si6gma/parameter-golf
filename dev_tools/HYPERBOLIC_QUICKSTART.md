@@ -9,7 +9,7 @@ Your instance: `medium-dracena-ostrich` @ uk-southeast-3
 ssh root@<ip-address>  # (IP will show when ready)
 
 # 2. Deploy everything
-wget https://raw.githubusercontent.com/yourusername/parameter-golf/main/dev_tools/scripts/deploy_hyperbolic.sh
+wget https://raw.githubusercontent.com/Si6gma/parameter-golf/main/dev_tools/scripts/deploy_hyperbolic.sh
 bash deploy_hyperbolic.sh
 
 # 3. Run full training
