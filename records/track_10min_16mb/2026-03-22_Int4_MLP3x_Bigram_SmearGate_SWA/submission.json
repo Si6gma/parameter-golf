@@ -1,0 +1,9 @@
+{
+	"name": "Int4/5/6 MLP3x + BigramHash + SmearGate + SWA",
+	"val_loss": 1.135,
+	"bytes_total": 15800000,
+	"blurb": "11 layers with aggressive mixed quantization (int4 MLP fc, int5 MLP proj, int6 attention). BigramHash 12288 buckets for better collision resistance. SmearGate for bigram context. SWA start_frac=0.4. 3x MLP expansion. Mean target: 1.135 bpb.",
+	"author": "Neiv Malaviya",
+	"github_id": "Si6gma",
+	"date": "2026-03-22"
+}
