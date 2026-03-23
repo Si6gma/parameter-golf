@@ -54,8 +54,8 @@ run_seed() {
     # Environment variables for this run
     export RUN_ID
     export SEED
-    export NUM_LAYERS=11
-    export BIGRAM_VOCAB_SIZE=12288
+    export NUM_LAYERS=10  # Back to 10L for reliable 16MB fit
+    export BIGRAM_VOCAB_SIZE=10240  # Reduced from 12288 to fit 16MB limit
     export MLP_FC_QUANT_BITS=4
     export MLP_PROJ_QUANT_BITS=5
     export ATTN_QUANT_BITS=6
@@ -64,7 +64,7 @@ run_seed() {
     export SWA_START_FRAC=0.4
     export TRAIN_SEQ_LEN=2048
     export TRAIN_BATCH_TOKENS=786432
-    export MAX_WALLCLOCK_SECONDS=600
+    export MAX_WALLCLOCK_SECONDS=0  # No limit, let it finish all steps
     
     # Run training
     torchrun \
